@@ -1,0 +1,15 @@
+<apex:page controller="Parent_child">
+    <apex:form >
+    	<apex:pageBlock >
+        <apex:commandButton value="add" action="{!add}"/>
+        <apex:pageBlockSection columns="1">    
+        <apex:inputText value="{!opp.AccountId}"/>
+        <apex:inputText value="{!opp.stagename}"/>
+        <apex:inputText value="{!opp.type}"/>
+        <apex:inputText value="{!opp.Name}"/>
+        <apex:inputText value="{!opp.closedate}"/>     
+            {!msg}
+        </apex:pageBlockSection>   
+        </apex:pageBlock>
+     </apex:form>
+</apex:page>

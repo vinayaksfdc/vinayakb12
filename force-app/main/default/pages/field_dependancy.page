@@ -1,0 +1,18 @@
+<apex:page controller="field_dependancy">
+    <apex:form >
+         <apex:pageBlock >
+             
+             {!selected}
+   			<apex:selectList size="1" value="{!selected}">
+                <apex:selectOptions value="{!state}" /> 
+        	     <apex:actionSupport event="onchange" action="{!getData}"/>
+             </apex:selectList>     
+        	<apex:selectList size="1">
+             	   <apex:selectOptions value="{!city}" /> 
+             </apex:selectList>>     
+        
+        </apex:pageBlock>>
+   
+    
+    </apex:form>
+</apex:page>

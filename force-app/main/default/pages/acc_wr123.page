@@ -1,0 +1,31 @@
+<apex:page controller="acc_wr123">
+    <apex:form >
+        <apex:pageBlock >
+        	<apex:pageBlockTable value="{!wr}" var="a">
+            	<apex:column >
+                    <apex:facet name="header">
+                          <apex:inputCheckbox /> 
+                	</apex:facet>
+                        <apex:inputCheckbox value="{!a.flag}" /> 
+                	 
+                </apex:column>    
+                <apex:column headerValue="Account Name">
+                    <apex:inputText value="{!a.acc.name}"/>
+                </apex:column>    
+                <apex:column headerValue="Account Rating">
+                    <apex:inputText value="{!a.acc.rating}"/>
+                </apex:column>    
+                <apex:column headerValue="Account Phone">
+                    <apex:inputText value="{!a.acc.phone}"/>
+                </apex:column>    
+                <apex:column headerValue="Account Industry">
+                    <apex:inputText value="{!a.acc.industry}"/> 
+                </apex:column>    
+             	  <apex:column headerValue="add">
+                    <apex:commandButton value="add" action="{!add}"/>
+              	 </apex:column>  
+                	
+            </apex:pageBlockTable>	
+        </apex:pageBlock>
+    </apex:form>    
+</apex:page>

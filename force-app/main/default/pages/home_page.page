@@ -1,0 +1,24 @@
+<apex:page controller="pg_refer" >
+    <apex:form >
+    <apex:pageblock >
+        <apex:pageBlockSection >
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel value="Name"></apex:outputLabel>
+            <apex:inputText value="{!name}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+        <apex:outputLabel value="Loan Type"></apex:outputLabel>
+        <apex:selectList size="1">
+        <apex:selectOption itemLabel="-none-" itemValue="none"></apex:selectOption>
+            <apex:selectOption itemLabel="Housing" itemValue="Housing"></apex:selectOption>
+            <apex:selectOption itemLabel="Personal" itemValue="Personal"></apex:selectOption>
+            <apex:actionSupport event="onchange" action="{!callme}"/>
+            </apex:selectList>
+		</apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        
+        
+        </apex:pageblock>
+    
+    </apex:form>
+</apex:page>

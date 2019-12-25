@@ -1,0 +1,16 @@
+<apex:page standardController="Contact" >
+    <H6> Hellow worldd </H6>
+    <apex:pageBlock title="Contact Summary">
+    
+    <apex:pageBlockSection > 
+        
+             Name : {! Contact.Name} <br/>
+       Phone : {! Contact.Phone} <br/>
+        Email : {! Contact.Email} <br/>
+        
+        </apex:pageBlockSection>
+        
+   
+    </apex:pageBlock>
+    
+</apex:page>

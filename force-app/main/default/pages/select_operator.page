@@ -1,0 +1,30 @@
+<apex:page controller="List_select_operator">
+    <style>
+        .box{width=300px}
+    </style>    
+    <apex:form >
+        <apex:pageBlock >
+        			<apex:pageBlockTable value="{!fieldList}" var="a"> 
+                    <apex:column headerValue="Fields">
+                        <apex:selectList size="1" styleClass="box">    
+                        <apex:selectOptions value="{!a.fields}" />
+                        </apex:selectList>
+                    </apex:column>	    
+                	<apex:column headerValue="Operators">
+                        <apex:selectList size="1" styleClass="box">    
+                        <apex:selectOptions value="{!a.Operators}" />
+                        </apex:selectList>
+                    </apex:column>	    
+                    <apex:column headerValue="Name">
+                        <apex:inputtext value="{!a.value}" />
+                    </apex:column>	    
+                    <apex:column headerValue="Add">
+                        <apex:commandButton value="ADD" action="{!add}"/>  
+                    </apex:column>	 
+                   	 
+                        
+              </apex:pageBlockTable>  
+         
+        </apex:pageBlock>
+    </apex:form>    
+</apex:page>

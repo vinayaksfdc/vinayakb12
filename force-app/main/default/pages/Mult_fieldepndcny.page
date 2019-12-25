@@ -1,0 +1,58 @@
+<apex:page controller="Mult_fieldepndcny">
+    <style>
+     .box{
+        width:150px;
+        }   
+    </style>    
+        <style>
+     .panel{
+        height:250px;    
+        width:250px;
+        }   
+    </style>  
+           <style>
+     .panel1{
+        height:300px;    
+        width:300px;
+        }   
+    </style> 
+    
+    
+   <apex:form id="one">
+   	<apex:pageBlock >
+		<apex:pageBlockSection columns="1">
+              <apex:outputLabel value="State"/>
+        	<apex:selectList size="1" value="{!selected1}" styleClass="box">
+              
+         	    <apex:selectOptions value="{!state}"/>
+				<apex:actionSupport event="onchange" action="{!getData}" rerender="one"/>                
+                </apex:selectList>
+                </apex:pageBlockSection>   
+       
+        
+        <apex:pageBlockSection >
+                <apex:panelGrid columns="3" id="one" styleClass="panel1">
+       <apex:panelGroup >
+        <apex:selectList multiselect="true"  value="{!addfields}" styleClass="panel"  >
+        <apex:selectOptions value="{!leftside}" />    
+        </apex:selectList>
+        </apex:panelGroup>   
+		 
+        		        
+   		<apex:panelGrid >
+         <apex:panelGroup >   
+        <apex:commandButton value="add" action="{!add}" />
+        <apex:commandButton value="del" action="{!del}" />
+         </apex:panelGroup>      
+        </apex:panelGrid>    
+         
+        <apex:panelGroup >      
+        <apex:selectList multiselect="true" value="{!removefields}" styleClass="panel">
+        <apex:selectOptions value="{!rightside}" />      
+        </apex:selectList>
+        </apex:panelGroup> 	        
+        </apex:panelGrid>
+        </apex:pageBlockSection>
+     </apex:pageBlock> 
+   </apex:form> 
+</apex:page>

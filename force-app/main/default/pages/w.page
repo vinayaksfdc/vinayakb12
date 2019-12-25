@@ -1,0 +1,15 @@
+<apex:page controller="w">
+<apex:form >
+<apex:pageblock >
+Name <apex:inputText value="{!wname}"/>
+age <apex:inputText value="{!wage}"/>
+<apex:commandButton value="create" action="{!create}"/>
+</apex:pageblock>
+<apex:pageblock >
+<apex:pageblocktable value="{!wr}" var="a">
+<apex:column headerValue="name" value="{!a.name}"></apex:column>
+<apex:column headerValue="age" value="{!a.age}"></apex:column>
+</apex:pageblocktable>
+</apex:pageblock>
+</apex:form>
+</apex:page>

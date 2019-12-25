@@ -1,0 +1,25 @@
+<apex:page controller="Account_Line">
+    <apex:form >
+        <br/><br/><br/>
+    	<apex:pageBlock mode="maindetail">
+        	<apex:pageBlockTable value="{!accounts}" var="a" id="one">
+            	
+                <apex:column headerValue="Name">
+                    <apex:inputText value="{!a.acc.Name}" />
+                </apex:column>
+                 <apex:column headerValue="Phone">
+                    <apex:inputText value="{!a.acc.Phone}" />
+                </apex:column>
+                 <apex:column headerValue="Industry">
+                    <apex:inputText value="{!a.acc.Industry}" />
+                </apex:column>
+                 <apex:column headerValue="Rating">
+                    <apex:inputText value="{!a.acc.Rating}" />
+                </apex:column>
+                 <apex:column headerValue="Action">
+                     <apex:commandButton value="Add" action="{!add}" reRender="one" />
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

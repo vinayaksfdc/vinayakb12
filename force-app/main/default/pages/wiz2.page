@@ -1,0 +1,12 @@
+<apex:page controller="wiz2">
+    <apex:form >
+        <apex:pageBlock >
+        	<apex:pageBlockSection >
+            <apex:outputField value="{!account.name}"/>
+            </apex:pageBlockSection>
+        	<apex:pageBlockSection >
+            <apex:outputField value="{!account.phone}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

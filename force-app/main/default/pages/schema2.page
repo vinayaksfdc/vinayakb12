@@ -1,0 +1,8 @@
+<apex:page controller="schema2">
+
+    <br/><br/>
+    {!entry}
+    
+    
+    
+</apex:page>

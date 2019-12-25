@@ -1,0 +1,12 @@
+<apex:page controller="xmL_example3">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:commandButton value="search" action="{!search}"/>
+            <apex:outputLabel value="Search Text"></apex:outputLabel>
+            <apex:inputText value="{!searchresult}"/>
+            <br/><br/>
+            <br/><br/>
+            {!result}
+        </apex:pageBlock>    
+    </apex:form>    
+</apex:page>

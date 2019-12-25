@@ -1,0 +1,15 @@
+<apex:page controller="Find_class" >
+  <apex:form >  
+	<apex:pageBlock >
+        Enter Input text &nbsp;&nbsp;<apex:inputText value="{!keyword}"/> &nbsp;&nbsp;&nbsp;&nbsp;
+        <apex:commandButton value="search" action="{!search}"/><br/><br/><br/>
+        
+    	<apex:pageBlockTable value="{!accs}" var="a">
+            <apex:column value="{!a.name}"/>
+    		<apex:column value="{!a.type}"/>    
+            <apex:column value="{!a.phone}"/>  
+            <apex:column value="{!a.industry}"/>  
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+  </apex:form>    
+</apex:page>

@@ -1,0 +1,12 @@
+<apex:page >
+    <script>
+    	function call()
+     	{
+        	document.write('this is callme');
+            
+        }   
+     </script>
+    <apex:form >
+        	<apex:inputText onchange="call()" ></apex:inputText>
+    </apex:form>    
+</apex:page>

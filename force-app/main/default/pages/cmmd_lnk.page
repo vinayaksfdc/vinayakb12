@@ -1,0 +1,5 @@
+<apex:page controller="links_ex">
+    <apex:form >
+    <apex:commandLink value="link" action="{!lnk}"/>
+    </apex:form>
+</apex:page>

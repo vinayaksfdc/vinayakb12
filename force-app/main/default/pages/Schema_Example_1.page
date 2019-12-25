@@ -1,0 +1,11 @@
+<apex:page controller="Schema_Example_1">
+    <apex:form >
+        <apex:selectList size="1" value="{!selectedobj}" >
+    <apex:actionSupport event="onchange" action="{!getData}"/>
+    	<apex:selectOptions value="{!options}"></apex:selectOptions>
+    </apex:selectList>
+    <apex:selectList size="1" >
+    	 <apex:selectOptions value="{!fields}"></apex:selectOptions>
+    </apex:selectList>
+    </apex:form>
+</apex:page>

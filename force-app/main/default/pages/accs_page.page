@@ -1,0 +1,15 @@
+<apex:page controller="wizard">
+   <apex:form > 
+    <apex:pageBlock Title="Enter Account Details" >
+    	<apex:pageBlockSection columns="1">
+    		<apex:inputField value="{!a.Name}"/>
+    		<apex:inputField value="{!a.type}"/>
+    		<apex:inputField value="{!a.phone}"/>
+    		<apex:inputField value="{!a.industry}"/>    
+        </apex:pageBlockSection>
+        
+        <apex:commandButton value="Next" action="{!cons_page}"/>
+        
+    </apex:pageBlock>
+   </apex:form> 
+</apex:page>

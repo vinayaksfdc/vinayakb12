@@ -1,0 +1,15 @@
+<apex:page controller="SelectOptions">
+   <apex:form >
+    	<apex:pageBlock >
+       			<apex:selectList size="1" value="{!selected}"> 
+                    <apex:selectOptions value="{!options}"/>
+            
+            	</apex:selectList>
+    	   
+       		<apex:commandButton value="search" action="{!querysearch}"/>
+            {!query}
+       
+       
+       </apex:pageBlock>
+    </apex:form>>
+</apex:page>

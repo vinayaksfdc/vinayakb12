@@ -1,0 +1,29 @@
+<apex:page controller="Country_picklist">
+    <style>
+       .box
+        {
+        heigth=500px;
+        width=500px;
+        }
+    </style>
+   <apex:form >
+       <apex:pageBlock >
+       		<apex:pageBlockSection columns="1" id="one">
+        		<apex:pageBlockSectionItem >
+                    <apex:selectList size="1" value="{!selected}" styleClass="box">
+                        <apex:outputLabel value="Country"></apex:outputLabel>
+                        <apex:selectOptions value="{!country}"></apex:selectOptions>
+                        <apex:actionSupport event="onchange" action="{!getData}" rerender="one"/>
+                    </apex:selectList>
+                    </apex:pageBlockSectionItem>   
+                		<apex:pageBlockSectionItem >
+                    <apex:selectList size="1" styleClass="box" >
+                        <apex:outputLabel value="State"></apex:outputLabel>
+                        <apex:selectOptions value="{!state}"></apex:selectOptions>
+                         
+                    </apex:selectList>
+                    </apex:pageBlockSectionItem>  
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>   
+ </apex:page>

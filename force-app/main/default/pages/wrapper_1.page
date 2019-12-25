@@ -1,0 +1,43 @@
+<apex:page controller="wrapper_1">
+  <apex:form >
+<apex:pageblock Title="Input" >
+<apex:pageBlockSection Title="Input">
+Name <apex:inputText value="{!Wname}"/>
+age <apex:inputText value="{!Wage}"/>
+city <apex:inputText value="{!Wcity}"/>
+</apex:pageBlockSection>
+<apex:pageBlock title="change">
+<apex:selectlist id="selectcity" value="{!sel}" size="1">
+<apex:selectOption itemvalue="hyd" itemlabel="hyd"/>
+<apex:selectOption itemvalue="ban" itemlabel="ban"/>
+<apex:selectOption itemvalue="che" itemlabel="che"/>
+</apex:selectlist>
+</apex:pageBlock>
+</apex:pageblock>
+<apex:commandButton value="create" action="{!create}"/>
+<apex:commandButton value="change" action="{!change}"/>
+<apex:commandButton value="Edit" action="{!edit}"/>
+<apex:commandButton value="saveedited" action="{!saveedited}"/>
+<apex:commandbutton Value="Delete" action="{!del}"></apex:commandbutton>
+<apex:pageblock Title="create">
+<apex:pageBlockTable value="{!W1}" var="a">
+<apex:column >
+<apex:inputCheckbox value="{!a.F1}" />
+</apex:column>
+<apex:column value="{!a.F1}"/>
+<apex:column value="{!a.name}"/>
+<apex:column value="{!a.age}"/>
+<apex:column value="{!a.city}"/>
+</apex:pageBlockTable>
+</apex:pageblock>
+
+<apex:pageblock Title="Deleted">
+<apex:pageBlockTable value="{!dell}" var="d">
+<apex:column value="{!d.F1}"/>
+<apex:column value="{!d.name}"/>
+<apex:column value="{!d.age}"/>
+<apex:column value="{!d.city}"/>
+</apex:pageBlockTable>
+</apex:pageblock>
+</apex:form>
+</apex:page>

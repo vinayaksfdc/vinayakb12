@@ -1,0 +1,4 @@
+<apex:page controller="email_example">
+    
+     {!toadd}
+</apex:page>

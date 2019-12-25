@@ -1,0 +1,35 @@
+<apex:page controller="onchange_ex">
+    <apex:form id="od" >
+    	<apex:pageBlock title="Cities_Places">
+        		<apex:pageBlockSection >
+                 <apex:pageBlockSectionItem >   
+         		<apex:outputLabel value="Cities"></apex:outputLabel>
+                <apex:selectList size="1"  value="{!selected1}" styleClass="box">
+				<apex:selectOptions value="{!cities}"></apex:selectOptions>   
+                 <apex:actionSupport event="onchange" action="{!details}" rerender="od"/>   
+                </apex:selectList>
+                </apex:pageBlockSectionItem>   
+                    
+                      
+                 <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="places" />
+                    <apex:selectList size="1">
+                        <apex:selectOptions value="{!leftside}" />
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>   
+                    
+                    <apex:panelGrid >
+             	          <apex:pageBlockSectionItem > 
+                       	  <apex:panelGroup >
+                          <apex:outputLabel value="Leftside"></apex:outputLabel>
+                          <apex:selectList multiselect="true"  style="width:200px;height:150px;">
+                          <apex:selectOptions value="{!leftside}"></apex:selectOptions><br/> <br/>
+						  </apex:selectList>
+                          </apex:panelGroup>    
+                    	  </apex:pageBlockSectionItem>	 
+                    </apex:panelGrid>   
+                    
+            	</apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

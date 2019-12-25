@@ -1,0 +1,15 @@
+<apex:page controller="dynamic_example1" >
+<apex:form >
+    <apex:commandButton value="Display" action="{!displaying}"/>
+    <apex:selectlist value="{!x}">
+    <apex:selectOptions value="{!op}"></apex:selectOptions>
+    </apex:selectlist>
+    <apex:commandButton value="submit" action="{!meth}"/>
+    <apex:pageBlock >
+    <apex:pageBlockTable value="{!acc}" var="a">
+    <apex:column value="{!a.name}"/>
+    <apex:column value="{!a.owner.name}"/>
+    </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

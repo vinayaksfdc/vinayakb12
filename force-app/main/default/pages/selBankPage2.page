@@ -1,0 +1,40 @@
+<apex:page controller="selectedBankCon">
+ <script>
+  function confirmCancel() {
+      var isCancel = confirm("Are you sure you wish to cancel?");
+      if (isCancel) return true;
+     return false;
+  }  
+  </script>
+  
+ <apex:form id="myForm">
+     <apex:pageBlock >    
+        <apex:pageBlockButtons location="top" >
+          <apex:commandButton action="{!step2}" value="Select & Next" id="next"/>
+          <apex:commandButton action="{!cancel}" value="Cancel" 
+                              onclick="return confirmCancel()" immediate="true" id="cancel"/> 
+        </apex:pageBlockButtons>
+        
+        <apex:pageMessages id="myMsg"/>
+          
+        <apex:outputPanel id="action1"> 
+       <apex:pageBlockSection columns="1" id="pbs">
+         <apex:pageBlockTable value="{!wrapBankList}" var="wb" id="pt" styleClass="pTable">            
+           <apex:column >
+             <apex:facet name="header">
+               <apex:outputLabel >Select</apex:outputLabel>
+             </apex:facet>
+            <apex:inputCheckbox value="{!wb.isSelected}" id="chkbox"/>
+           </apex:column>
+            
+            <apex:column value="{!wb.wbk.name}"/>
+            <apex:column value="{!wb.wbk.phone}"/>
+            <apex:column value="{!wb.wbk.industry}"/>
+            <apex:column value="{!wb.wbk.rating}"/>
+         </apex:pageBlockTable>
+  
+       </apex:pageBlockSection>
+       </apex:outputPanel>
+     </apex:pageBlock>
+   </apex:form> 
+</apex:page>

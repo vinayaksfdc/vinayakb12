@@ -1,0 +1,3 @@
+<apex:page controller="set_direct_example" >
+The received value is {!option}
+</apex:page>

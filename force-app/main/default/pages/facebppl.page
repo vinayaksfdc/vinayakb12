@@ -1,0 +1,24 @@
+<apex:page controller="facebook" >
+  <apex:form >  
+  <apex:pageBlock title="Facebook"> 
+      				<apex:pageBlockButtons location="Top">
+      					<apex:commandButton value="Submit" action="{!request}" rerender="one"/>
+      				</apex:pageBlockButtons>
+      				
+      		<apex:pageBlockSection columns="1">
+      			   <apex:pageBlockSectionItem >
+                       <apex:outputText value="Client Id" />
+                            <apex:inputtext value="{!client_id}" />     
+                   </apex:pageBlockSectionItem>
+      			   <apex:pageBlockSectionItem >
+                       <apex:outputText value="client_Secret" />
+      				 		<apex:inputtext value="{!client_Secret}" />  
+                  </apex:pageBlockSectionItem>
+                 <apex:outputText value="{!result}" id="one"/> 
+      		</apex:pageBlockSection>
+      			     
+                    
+      			 
+ </apex:pageBlock> 
+ </apex:form>     
+</apex:page>

@@ -1,0 +1,18 @@
+<apex:page controller="awacc" sidebar="false">
+    <apex:form >
+    	<apex:pageBlock >
+            <apex:commandButton value="remove" action="{!remove}" />
+            <apex:pageBlockTable value="{!aw}" var="a">
+                
+           	    <apex:column > 
+                    <apex:facet name="header"> <apex:inputCheckbox /></apex:facet>
+                          <apex:inputCheckbox value="{!a.flag}"/>
+                </apex:column>    
+                <apex:column value="{!a.acc.Name}"/>
+                <apex:column value="{!a.acc.phone}"/>
+                <apex:column value="{!a.acc.industry}"/>
+        	</apex:pageBlockTable>
+        </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

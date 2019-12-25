@@ -1,0 +1,7 @@
+<apex:page controller="mparam" sidebar="true" showHeader="true" >
+    <apex:form >
+        <apex:outputText value="{!inputText3}"  /><br/>
+        <apex:outputText value="{!inputText4}"  />
+        <br />
+    </apex:form>
+</apex:page>

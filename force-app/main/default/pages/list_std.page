@@ -1,0 +1,8 @@
+<apex:page controller="list_of_objects">
+    <apex:form >
+    <apex:pageblock >
+        	 
+     		{!leftside}
+    </apex:pageblock>
+    </apex:form>
+    </apex:page>

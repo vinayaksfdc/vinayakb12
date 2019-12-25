@@ -1,0 +1,14 @@
+<apex:page controller="xz1" id="pg">
+    <apex:form >
+        <apex:pageBlock title="List_Example">
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Names" />
+                    <apex:selectList value="{!selected}"  size="1">
+                    <apex:selectOptions value="{!options}" />
+                    </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+    </apex:form>
+</apex:page>

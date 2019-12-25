@@ -1,0 +1,27 @@
+<aura:component controller="acc_ex">
+	 <aura:attribute name="accList" type="list"/>
+    
+    <lightning:input label="Enter industry" aura:id="industry"></lightning:input>
+    <lightning:input label="Enter rating" aura:id="rating"></lightning:input>	
+    
+    
+    	 <lightning:button label="Submit" onclick="{!c.invoke}" />
+    
+    <div>
+    	<table>
+            <tr>
+                <td>Name</td><td>Phone</td>
+                <td>Industry</td><td>Rating</td>
+                
+            </tr>
+			  <aura:iteration items="{!v.accList}" var="a">
+                  
+                
+             <tr>
+                <td>{!a.Name}</td><td>{!a.Phone}</td>
+                <td>{!a.Industry}</td><td>{!a.Rating}</td>
+            </tr>
+                   </aura:iteration>  
+        </table>
+    </div>
+</aura:component>

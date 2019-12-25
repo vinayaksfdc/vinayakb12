@@ -1,0 +1,14 @@
+<apex:page controller="Listofcontactschildnotmorethan2">
+    <apex:form >
+    		<apex:pageBlock >
+        		<apex:pageblocktable value="{!cons}" var="a">
+                    <apex:column value="{!a.id}"/>
+                    <apex:column value="{!a.name}"/>
+                    <apex:column value="{!a.accountid}"/>
+                    <apex:column value="{!a.account.name}"/>
+                    
+                 
+                </apex:pageblocktable>
+              </apex:pageBlock>
+         </apex:form>
+</apex:page>

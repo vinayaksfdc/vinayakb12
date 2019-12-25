@@ -1,0 +1,16 @@
+<apex:page controller="Job_skills" >
+    <apex:form >
+    	<apex:pageblock >
+        	<apex:pageBlockSection >
+            	<apex:pageBlockSection >
+                	<apex:pageBlockSectionItem >
+                    	<apex:outputLabel value="Skills"></apex:outputLabel>
+                            <apex:selectList size="1">
+                                <apex:selectOptions value="{!options}"></apex:selectOptions>
+                            </apex:selectList>	
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+            </apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

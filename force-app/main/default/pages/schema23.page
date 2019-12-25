@@ -1,0 +1,3 @@
+<apex:page controller="schema23">
+    {!pckval}
+</apex:page>

@@ -1,0 +1,43 @@
+<apex:page controller="schema_multiselect">
+    <apex:form >
+         <apex:pageBlock >
+              <apex:commandButton value="Query" action="{!fetchData}" />
+		      <apex:pageBlockSection columns="1">
+              <apex:outputLabel value="{!Query}"/>
+                
+           	  <apex:selectList size="1" value="{!objselected}">
+              <apex:selectOptions value="{!objects}" /> 
+        	  <apex:actionSupport event="onchange" action="{!getData}"/>
+              </apex:selectList>     
+              </apex:pageBlockSection>     
+         <apex:pageBlockSection >
+             <br/><br/><br/><br/>
+                 <apex:panelGrid columns="3">   
+                     <apex:selectList multiselect="true" style="height:150px;width:150px;" value="{!addFields}" >
+                        <apex:selectOptions value="{!leftside}" /> 
+                      </apex:selectList>
+            	 <apex:panelGrid columns="1">
+                    <br/><br/>
+                    <apex:commandButton value="add" action="{!add}"  />
+                    <br/><br/>
+                    <apex:commandButton value="del" action="{!del}" />
+            	 </apex:panelGrid> 
+              
+                     <apex:selectList multiselect="true" style="height:150px;width:150px;" value="{!removeFields}">
+                      <apex:selectOptions value="{!rightside}"></apex:selectOptions>
+               		 </apex:selectList>
+                 </apex:panelGrid>
+              
+         </apex:pageBlockSection> 
+             </apex:pageBlock>            
+              <apex:pageBlock mode="maindetail">
+              <apex:pageBlockTable value="{!result}" var="a">
+              <apex:repeat value="{!display}" var="b">
+                <apex:column value="{!a[b]}"/>
+              </apex:repeat>    
+              </apex:pageBlockTable>  
+		  </apex:pageBlock>
+   
+    
+    </apex:form>
+</apex:page>

@@ -1,0 +1,30 @@
+<apex:page controller="Country_state_example">
+<style>
+.bx{
+    heigth:150;width:150;
+    }    
+</style>
+    
+    <apex:form >
+   	 <apex:pageBlock id="one">	
+          
+    	<apex:selectList size="1" value="{!selected}">
+            <apex:outputLabel value="Country"/>
+            <apex:selectOptions value="{!countries}"  />
+            <apex:actionSupport event="onchange" action="{!getData}"/>
+         </apex:selectList><br/><br/><br/>
+ 
+         
+         <apex:panelGrid > 
+                   <apex:selectList multiselect="true"  styleClass="bx">
+                   <apex:outputLabel value="Places"/>
+                   <apex:selectOptions value="{!places}"/>
+                   </apex:selectList>
+         
+         </apex:panelGrid>
+         
+         
+         
+     </apex:pageBlock>
+   </apex:form>
+</apex:page>

@@ -1,0 +1,12 @@
+<apex:page controller="emp_class" >
+    <apex:form >
+   <apex:pageBlock >
+       <apex:pageBlockTable title="employee" value="{!ew}" var="a">
+           <apex:column headerValue="EmpName" value="{!a.empname}"/>
+            <apex:column headerValue="Salary" value="{!a.salary}"/>
+	        <apex:column headerValue="exp" value="{!a.exp}"/>
+       
+       </apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

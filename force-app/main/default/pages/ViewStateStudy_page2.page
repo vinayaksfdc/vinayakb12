@@ -1,0 +1,12 @@
+<apex:page controller="ViewStateStudy_controller" >
+	<apex:form >
+	<apex:pageBlock >
+		<apex:pageBlockButtons >
+			<apex:commandButton action="{!page1}" value="Previous" />
+		</apex:pageBlockButtons>
+		<apex:pageBlockSection >
+			<apex:outputField value="{!account.Name}"/>
+		</apex:pageBlockSection>
+	</apex:pageBlock>
+	</apex:form>
+</apex:page>

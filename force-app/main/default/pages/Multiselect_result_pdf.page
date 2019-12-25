@@ -1,0 +1,13 @@
+<apex:page controller="Multi_oper_field_Dependencies">
+    <apex:form >
+        	
+        
+    	 <apex:pageBlock mode="maindetail">
+            	{!query}
+             <apex:pageBlockTable value="{!result}" var="a">
+               
+                  
+             </apex:pageBlockTable>   
+          </apex:pageBlock>
+     </apex:form>
+</apex:page>

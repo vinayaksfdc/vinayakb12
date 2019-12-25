@@ -1,0 +1,14 @@
+<apex:page controller="pge_refernce_example">
+   <apex:form > 
+
+    <apex:pageBlock title="Example">
+    	Student : <apex:selectList size="1" value="{!selected}">
+        					<apex:selectOption itemLabel="-none-" itemValue="None" />
+        					<apex:selectOption itemLabel="Student" itemvalue="Student" />
+        				    <apex:selectOption itemLabel="Employee" itemValue="Employee" />
+        		  </apex:selectList>  
+        <br/>
+         <apex:commandButton value="Submit" action="{!invoke}" />
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

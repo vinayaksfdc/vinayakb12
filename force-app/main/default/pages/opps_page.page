@@ -1,0 +1,15 @@
+<apex:page controller="wizard">
+   <apex:form > 
+    <apex:pageBlock >
+    	<apex:pageBlockSection title="Enter Opportunity Details" columns="1" >
+    		<apex:inputField value="{!o.Name}"/>
+    		<apex:inputField value="{!o.amount}"/>
+    		<apex:inputField value="{!o.stageName}"/>
+            <apex:inputField value="{!o.closeDate}"/>
+        </apex:pageBlockSection>
+        
+        <apex:commandButton value="Next" action="{!review}"/>
+        
+    </apex:pageBlock>
+   </apex:form> 
+</apex:page>

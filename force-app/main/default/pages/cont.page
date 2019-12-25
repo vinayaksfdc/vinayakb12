@@ -1,0 +1,12 @@
+<apex:page controller="cont" >
+    <apex:form >
+    <apex:pageBlock >
+    <apex:pageBlockTable title="contact" value="{!con}" var="a">
+	<apex:column value="{!a.LastName}"/>
+        <apex:column value="{!a.phone}"/>    
+        </apex:pageBlockTable>
+    
+    </apex:pageBlock>
+        </apex:form>
+              
+</apex:page>

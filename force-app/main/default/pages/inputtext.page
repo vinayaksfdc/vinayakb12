@@ -1,0 +1,23 @@
+<apex:page controller="inputtext" id="pg">
+        <script>
+    function show(myId){
+   alert(myId);
+    
+    }
+    </script>
+    <apex:form id="fm">
+
+            	<apex:pageBlock id="pgblc">
+                <apex:pageBlockSection id="pbs">
+    			<apex:outputText value="Name"></apex:outputText>   
+                <apex:inputText value="{!Name}" id="name" onchange="show{this.id}"/> 
+         
+        		<apex:outputText value="phone"></apex:outputText> 
+                <apex:inputText value="{!phone}" id="phone" onchange="show{this.id}"/>
+                
+        		<apex:outputText value="industry"></apex:outputText> 
+                <apex:inputText value="{!industry}" id="industry" onchange="show{this.id}"/>
+           </apex:pageBlockSection>
+         </apex:pageBlock>
+    </apex:form>
+</apex:page>

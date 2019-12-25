@@ -1,0 +1,10 @@
+<apex:page controller="email_class">
+    <apex:form >
+		<apex:pageBlock >
+                Enter Subject <apex:inputText value="{!subject}" maxlength="100"/> <br/><br/>
+            Enter Email body <apex:inputtextarea value="{!email_body}" rows="5" cols="30" /> <br/><br/> 
+            <apex:commandButton value="Click on send" action="{!send}"/>
+        
+        </apex:pageBlock>    
+	</apex:form>
+</apex:page>

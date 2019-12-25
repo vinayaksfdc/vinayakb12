@@ -1,0 +1,14 @@
+<apex:page controller="http_example">
+    <apex:form >
+        <apex:pageBlock >
+        		Enter URL <apex:inputtext value="{!endpoint}" label="Enter URl" size="70" />
+            &nbsp; &nbsp; &nbsp; <apex:commandButton value="Submit" action="{!getData}"/>
+            <br/><br/><br/><br/>
+       The Body is &nbsp;<apex:inputTextarea value="{!body}" rows="10" cols="50"/>
+            &nbsp;
+         Result is    &nbsp;
+      	 <apex:inputTextarea value="{!result}" rows="10" cols="50"/>&nbsp;
+        
+        </apex:pageBlock>
+    </apex:form>    
+</apex:page>

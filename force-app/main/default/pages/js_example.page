@@ -1,0 +1,17 @@
+<apex:page >
+    <apex:form >
+    This is line one<br/>
+    <script>
+   	function callme(){
+		document.write('this is a callme call');
+    }
+        	function show(){
+		document.write('this is a show call');
+    }
+     
+        </script>
+    <br/>
+    <apex:commandButton value="click" onclick="callme()" oncomplete="show()"/>
+    This is line two
+        </apex:form>
+</apex:page>

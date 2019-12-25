@@ -1,0 +1,9 @@
+<apex:page controller="set_ex2">
+    <apex:form >
+    <apex:pageblock >
+    {!query}    
+        
+        
+    </apex:pageblock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,16 @@
+<apex:page controller="sqg">
+<apex:form >
+<apex:pageBlock title="List_Example">
+<apex:pageBlockSection >
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="Cities" />
+<apex:selectList size="1" value="{!selected}">
+<apex:selectOptions value="{!options}" />
+</apex:selectList>
+    
+</apex:pageBlockSectionItem>
+    {!selected}
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

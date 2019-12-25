@@ -1,0 +1,28 @@
+<apex:page controller="List_Wrapper1">
+    <apex:form >
+    <apex:pageBlock >
+    	<apex:pageBlockSection columns="1">
+        Name <apex:inputText value="{!wname}"/>
+	  	Age <apex:inputText value="{!wage}"/>
+	    City <apex:inputText value="{!wcity}"/>
+      	</apex:pageBlockSection>      
+        
+        
+    	<apex:pageBlockSection >
+        <apex:commandButton value="create" action="{!create}"/>
+        <apex:commandButton value="delete" action="{!del}"/>
+        
+            <apex:pageBlockTable value="{!W1}" var="a">
+                <apex:column >
+				<apex:inputCheckbox value="{!a.F1}" />
+				</apex:column>
+            <apex:column value="{!a.name}"/>
+		  	<apex:column value="{!a.age}"/>
+		  	<apex:column value="{!a.city}"/>    
+                
+            </apex:pageBlockTable> 
+        </apex:pageBlockSection>
+    
+    </apex:pageBlock>
+  </apex:form>	
+</apex:page>

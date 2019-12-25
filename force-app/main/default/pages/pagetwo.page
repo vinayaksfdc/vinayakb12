@@ -1,0 +1,22 @@
+<apex:page controller="Controller2" sidebar="true" showHeader="true" >
+    <apex:form >
+       
+           <apex:pageBlock >
+          Query value is &nbsp;&nbsp;&nbsp;     <apex:outputtext value="{!qry}"  />  
+                 String value is &nbsp;&nbsp;&nbsp;     <apex:outputtext value="{!values}"  />  
+               List value is <apex:outputtext value="{!display}"  />  
+        </apex:pageBlock>   
+        <apex:pageBlock id="one" >
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Query" action="{!querymydata}" rerender="one"/>
+            </apex:pageBlockButtons>  
+            
+            <apex:pageBlockTable value="{!result}" var="records" rendered="{! !isnull(result)}">
+                <apex:repeat value="{!display}" var="fld">
+                    <apex:column value="{!records[fld]}"/>
+                </apex:repeat>
+            </apex:pageBlockTable> 
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

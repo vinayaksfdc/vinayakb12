@@ -1,0 +1,25 @@
+<apex:page controller="Soql_example">
+    <apex:form >
+    <apex:pageBlock >
+		     Search Text   <apex:inputtext value="{!sname}"/>
+        	&nbsp;&nbsp;&nbsp;<apex:commandButton value="search" action="{!search}"/>
+        
+        
+        <apex:pageBlockTable value="{!accList}" var="a">
+        	<apex:column headervalue="ID">
+                <apex:outputLink value="/{!a.id}" target="_blank">{!a.id} </apex:outputLink>
+            </apex:column>
+           <apex:column headerValue="Name">
+            <apex:outputLink value="/{!a.id}" target="_blank">{!a.Name}</apex:outputLink>
+            </apex:column>
+        
+        <apex:column headerValue="Industry"> 
+            <apex:outputlink value="/{!a.id}" target="_blank"> {!a.Industry}</apex:outputlink>    
+            </apex:column>    
+        <apex:column headerValue="rating" value="{!a.rating}"/>       
+         </apex:pageBlockTable>
+        {!vname}<br/>{!vrating}<br/>
+        {!vindustry}
+    </apex:pageBlock>
+      </apex:form>  
+</apex:page>

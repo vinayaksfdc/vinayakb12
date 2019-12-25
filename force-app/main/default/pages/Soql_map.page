@@ -1,0 +1,9 @@
+<apex:page controller="Offset_Example_6">
+    <apex:form >
+    	<apex:pageBlock title="Accounts" id="one">
+             <apex:selectList size="1">
+                 <apex:selectOptions value="{!objects}" />
+             </apex:selectList>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,27 @@
+<aura:component >
+    <aura:attribute name="buttonlabel" type="string" default="Search Button" />
+    <aura:attribute name="newlabel" type="string" default="New Button" />
+    <aura:attribute name="isNewAvailable" type="boolean" default="false" />
+    <aura:attribute name="carTypes" type="String[]" default="Sports Car,Luxury Car,Van" />
+      <lightning:layout horizontalalign="center">
+        <lightning:layoutitem padding="around-small">
+          <lightning:select name="Select Item" label="All Types" variant="label-hidden" value="">
+        	<option value="">All Types</option>
+            <aura:iteration items="{!v.carTypes}" var="item">
+         	<option value="1">{!item}</option>
+    		</aura:iteration>
+          </lightning:select>
+        </lightning:layoutitem>
+        <lightning:layoutItem padding="around-medium">
+            <lightning:button  variant="brand" label="{!v.buttonlabel}" onclick="{!c.onsearchclick}" />
+            
+             <aura:if isTrue="{!v.isNewAvailable}">
+   			 	True
+    			<aura:set attribute="else">
+      			false
+   				</aura:set>
+  			 </aura:if> 
+       <lightning:button variant="neutral" label="{#v.newlabel}" />
+       </lightning:layoutItem>
+       </lightning:layout>
+</aura:component>

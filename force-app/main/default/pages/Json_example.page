@@ -1,0 +1,9 @@
+<apex:page controller="Json_example" >
+    <apex:form >
+    <apex:pageBlock >
+        {!std.name}
+        {!std.branch}
+        {!std.phone}
+     </apex:pageBlock>
+    </apex:form>
+</apex:page>

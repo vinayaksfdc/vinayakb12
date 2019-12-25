@@ -1,0 +1,13 @@
+<apex:page controller="soql_xe1">
+<apex:form >
+<apex:pageBlock title="Account">
+    <apex:commandButton value="search" action="{!search}"/>
+<apex:pageBlockTable value="{!accounts}" var="a">
+<apex:column value="{!a.name}" />
+<apex:column value="{!a.industry}" />
+<apex:column value="{!a.phone}" />
+<apex:column value="{!a.rating}" />
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

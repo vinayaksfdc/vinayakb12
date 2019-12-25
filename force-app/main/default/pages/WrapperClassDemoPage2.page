@@ -1,0 +1,14 @@
+<apex:page controller="WrapTestClassDemoController2" renderAs="pdf">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:pageBlockTable value="{!records}" var="r">
+                    <apex:column headerValue="Name">{!r.Name}
+                </apex:column>
+                <apex:column headerValue="Phone">{!r.Phone}
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+   </apex:form>
+</apex:page>

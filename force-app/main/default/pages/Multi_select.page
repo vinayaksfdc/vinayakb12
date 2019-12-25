@@ -1,0 +1,88 @@
+<apex:page controller="Multi_select">
+    <style>
+     .box{
+        width:150px;
+        height:150px;
+        }   
+    </style>    
+        <style>
+     .box1{
+        width:150px;
+        }   
+    </style>  
+            <style>
+     .box2{
+        width:100px;
+        }   
+    </style>  
+
+    
+   <apex:form id="one">
+   	<apex:pageBlock >
+            <apex:commandButton value="Query" action="{!fetchData}" />
+		<apex:pageBlockSection columns="1">
+              <apex:outputLabel value="{!Query}"/>
+        	<apex:selectList size="1" value="{!objselected}" styleClass="box1">
+              
+         	    <apex:selectOptions value="{!Objects}"/>
+				<apex:actionSupport event="onchange" action="{!getData}" rerender="one,two,three"/>                
+                </apex:selectList>
+                </apex:pageBlockSection>   
+    
+        <apex:pageBlockSection id="one">
+        <apex:panelGrid columns="3" >
+        <apex:panelGroup >
+        <apex:selectList multiselect="true"  value="{!addfields}" styleClass="box"  >
+        <apex:selectOptions value="{!leftside}" />    
+        </apex:selectList>
+        </apex:panelGroup>   
+		 
+        <apex:panelGrid >
+        <apex:panelGroup >   
+        <br/><br/>    
+        <apex:commandButton value="add" action="{!add}" /><br/><br/>
+        <apex:commandButton value="del" action="{!del}" />
+        </apex:panelGroup>      
+        </apex:panelGrid>    
+         
+        <apex:panelGroup >      
+        <apex:selectList multiselect="true" value="{!removefields}" styleClass="box">
+        <apex:selectOptions value="{!rightside}" />      
+        <apex:actionSupport event="onchange" action="{!fetchData}" reRender="one" />
+        </apex:selectList>
+        </apex:panelGroup> 	        
+        </apex:panelGrid>
+           
+        	<apex:panelGrid styleClass="box2" id="three">
+        		<apex:pageBlockTable value="{!fieldList}" var="a"> 
+                    <apex:column headerValue="Fields">
+                        <apex:selectList size="1" styleClass="box2">    
+                        <apex:selectOptions value="{!foption}" />
+                        </apex:selectList>
+                    </apex:column>	    
+                	<apex:column headerValue="Operators">
+                        <apex:selectList size="1" styleClass="box2">    
+                        <apex:selectOptions value="{!a.Operators}" />
+                        </apex:selectList>
+                    </apex:column>	    
+                    <apex:column headerValue="Name">
+                        <apex:inputtext value="{!a.value}" />
+                    </apex:column>	    
+                    <apex:column headerValue="Add">
+                        <apex:commandButton value="ADD" action="{!add12}"/>  
+                    </apex:column>	        
+              </apex:pageBlockTable>  
+              <apex:pageBlock mode="maindetail">
+              <apex:pageBlockTable value="{!result}" var="a">
+              <apex:repeat value="{!display}" var="b">
+                <apex:column value="{!a[b]}"/>
+              </apex:repeat>    
+              </apex:pageBlockTable>  
+              </apex:pageBlock>
+           </apex:panelGrid>    
+            
+ 	</apex:pageBlockSection>     
+       
+     </apex:pageBlock> 
+   </apex:form> 
+</apex:page>

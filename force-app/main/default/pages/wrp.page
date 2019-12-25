@@ -1,0 +1,16 @@
+<apex:page controller="wrp2">
+    <apex:form >
+    	<apex:pageblock >
+            <apex:commandButton value="deleteselected" action="{!deleteacc}"/>
+    		<apex:pageBlockTable value="{!cs}" var="a">
+                <apex:column >
+                    <apex:inputCheckbox value="{!a.isselected}"/>
+                </apex:column>    
+            	<apex:column value="{!a.acc.name}"/>
+            	<apex:column value="{!a.acc.phone}"/>
+                <apex:column value="{!a.acc.industry}"/>
+                <apex:column value="{!a.acc.rating}"/>
+             </apex:pageBlockTable>        
+        </apex:pageblock>    
+    </apex:form>
+</apex:page>

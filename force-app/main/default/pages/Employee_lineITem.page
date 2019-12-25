@@ -1,0 +1,23 @@
+<apex:page controller="Employee_list">
+    <apex:form id="pf">
+       <apex:pageBlock >
+       		<apex:pageBlockSection >
+                <apex:commandButton value="add" action="{!add}" rendered="{!flag1}" rerender="pf"/>
+                <apex:commandButton value="submit" action="{!submit}" rendered="{!flag2}" rerender="pf"/>
+             </apex:pageBlockSection>     
+           <apex:pageBlockSection rendered="{!flag3}">
+           		<apex:outputLabel value="Enter Name"></apex:outputLabel>     
+                <apex:inputText value="{!emp.Name}" />
+				<apex:outputLabel value="City"></apex:outputLabel>     
+                <apex:inputText value="{!emp.City}" />               
+           </apex:pageBlockSection>  
+           
+           <apex:pageBlockSection rendered="{! employees.size>0}">
+           <apex:pageBlockTable value="{!employees}" var="a">
+			<apex:column value="{!a.Name}"/>               
+            <apex:column value="{!a.City}"/>                   
+           </apex:pageBlockTable>
+           </apex:pageBlockSection>
+       </apex:pageBlock> 
+    </apex:form>     
+</apex:page>

@@ -1,0 +1,33 @@
+<apex:page controller="list_of_objects">
+   <style>
+    .box
+    {
+       width:100px;
+       height:100px;
+    }
+    </style>
+    <apex:form >
+         <apex:pageBlock title="Multi Select Country List">
+             
+				<apex:panelGrid columns="3" id="one">
+                       
+                        <apex:selectList styleClass="box" multiselect="true" value="{!addfields}">
+                        <apex:selectOptions value="{!leftside}" />    
+                       	</apex:selectList>
+                         
+                <apex:panelGrid >
+                 <apex:commandButton value="add" action="{!add}" rerender="one"/><br/><br/>
+                 <apex:commandButton value="remove" action="{!del}" rerender="one"/><br/><br/>
+                 </apex:panelGrid>    
+                    	 
+                 <apex:selectList styleClass="box" multiselect="true" value="{!removefields}">
+                 <apex:selectOptions value="{!rightside}" />
+                 </apex:selectList>
+                        
+  			
+         	</apex:panelGrid>
+         
+         	 	
+    	 </apex:pageBlock>
+	 </apex:form>	
+</apex:page>

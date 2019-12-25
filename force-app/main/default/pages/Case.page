@@ -1,0 +1,7 @@
+<apex:page controller="Country_state_example" >
+    <apex:pageBlock >
+		
+        <apex:selectOptions value="{!Countries}"/>    
+    
+    </apex:pageBlock>  
+</apex:page>

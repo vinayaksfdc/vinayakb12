@@ -1,0 +1,10 @@
+<apex:page controller="soql_con" >
+	<apex:pageBlock >
+    	<apex:pageBlockTable value="{!cont}" var="a">
+            <apex:column value="{!a.AccountId}"/>
+    		<apex:column value="{!a.FirstName}"/>    
+            <apex:column value="{!a.id}"/>  
+        	<apex:column value="{!a.LastModifiedDate}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

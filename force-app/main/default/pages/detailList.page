@@ -1,0 +1,24 @@
+<apex:page standardController="Account" recordSetVar="acts">
+  <apex:form >  
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+    	<apex:pageBlockTable value="{!acts}" var="a">
+            <apex:column >
+            <apex:commandLink value="{!a.name}" rerender="one"/>
+                <apex:param name="x" value="{!a.id}" />   
+                <apex:param name="y" value="{!a.name}" /> 
+            </apex:column>
+            <apex:column value="{!a.phone}"/>   
+            <apex:column value="{!a.industry}"/>  
+            <apex:column value="{!a.rating}"/> 
+            <apex:column value="{!a.type}"/> 
+        </apex:pageBlockTable>	
+     	
+   		<apex:pageBlock title="{!$CurrentPage.parameters.y}"   id="one">
+            <apex:detail subject="{!$CurrentPage.parameters.x}" relatedlist="false"/>
+            
+      	</apex:pageBlock>
+    	  </apex:pageBlockSection>  
+    </apex:pageBlock>
+  </apex:form>    
+</apex:page>

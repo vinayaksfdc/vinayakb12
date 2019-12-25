@@ -1,0 +1,17 @@
+<apex:page controller="schema_example">
+    <apex:form >
+         <apex:pageBlock >
+           	        
+   			<apex:selectList size="1" value="{!objselected}">
+                <apex:selectOptions value="{!objects}" /> 
+        	     <apex:actionSupport event="onchange" action="{!getData}"/>
+             </apex:selectList>     
+        	<apex:selectList size="1">
+             	      <apex:selectOptions value="{!fields}" /> 
+             </apex:selectList>>     
+        
+        </apex:pageBlock>>
+   
+    
+    </apex:form>
+</apex:page>

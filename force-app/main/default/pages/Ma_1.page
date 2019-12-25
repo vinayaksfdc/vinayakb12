@@ -1,0 +1,12 @@
+<apex:page controller="Ma_1">
+   <apex:form >
+   	<apex:pageBlock >
+		<apex:pageBlockSection >
+        	<apex:selectList size="1" >
+                <apex:outputLabel value="Accounts"/>
+         	   <apex:selectOptions value="{!options}"/>
+            </apex:selectList>
+    	  </apex:pageBlockSection>    
+     </apex:pageBlock> 
+   </apex:form> 
+</apex:page>

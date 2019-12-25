@@ -1,0 +1,15 @@
+<apex:page controller="INsert_accnt">
+ <apex:form >   
+  <apex:pageblock >
+        	 <apex:pageBlockButtons >
+    		 <apex:commandButton value="create" action="{!create}"/> 
+     	     </apex:pageBlockButtons>
+		<apex:pageBlockSection columns="1">
+      	      <apex:outputLabel value="{!msg}"> </apex:outputLabel>
+                <apex:inputText value="{!con.firstname}"/>
+                <apex:inputText value="{!con.lastname}"/>
+                <apex:inputText value="{!con.phone}"/>
+        </apex:pageBlockSection>
+   </apex:pageblock>
+     </apex:form>
+</apex:page>

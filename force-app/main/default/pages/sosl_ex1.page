@@ -1,0 +1,20 @@
+<apex:page controller="sosl_ex1">
+  <apex:form >  
+    <apex:pageBlock >
+        <apex:pageBlockButtons location="bottom">
+         <apex:commandButton value="submit" action="{!submit}" />
+        </apex:pageBlockButtons>
+       
+    	<apex:outputLabel value="Enter where statement value"></apex:outputLabel>
+        <apex:inputText value="{!ratng}" />
+      
+        
+        	<apex:pageBlockTable value="{!accs}" var="a">
+        		<apex:column value="{!a.name}"/>
+        	    <apex:column value="{!a.Phone}"/>
+                <apex:column value="{!a.Industry}"/>
+                <apex:column value="{!a.Rating}"/>
+        	</apex:pageBlockTable>
+    </apex:pageBlock>
+  </apex:form>    
+</apex:page>

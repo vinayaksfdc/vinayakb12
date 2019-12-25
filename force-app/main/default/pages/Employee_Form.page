@@ -1,0 +1,21 @@
+<apex:page controller="Employee_Form">
+    <apex:form >
+    	<apex:pageBlock title="Employee Details">
+        	<apex:pageBlockButtons location="top">
+                <apex:commandButton value="Submit" />
+            </apex:pageBlockButtons>
+           Employee Name : <apex:inputText value="{!emp_name}" /> <br/><br/>
+            Employee Id  : <apex:inputText value="{!emp_id}" /> <br/><br/>
+            City : <apex:selectList size="1" value="{!city}">
+            			<apex:selectOption itemLabel="-None-" itemValue="none" />
+            			<apex:selectOption itemLabel="Hyd" itemValue="Hyd" />
+            			<apex:selectOption itemLabel="Hyd" itemValue="Hyd" />
+            	    </apex:selectList> <br/><br/>
+            gender: <apex:selectCheckboxes value="{!gender}">
+            				<apex:selectOption itemLabel="Male" itemValue="Male" />
+            				<apex:selectOption itemLabel="Female" itemValue="Female" />
+            		   </apex:selectCheckboxes>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

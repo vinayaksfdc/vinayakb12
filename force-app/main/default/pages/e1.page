@@ -1,0 +1,10 @@
+<apex:page controller="List_e" >
+    <apex:pageBlock >
+    	<apex:pageBlockTable value="{!e1}" var="a">
+            <apex:column value="{!a.name}" headerValue="Name" />
+        	 <apex:column value="{!a.industry}"  headerValue="industry" />
+         </apex:pageBlockTable>
+    
+    
+    </apex:pageBlock>
+</apex:page>

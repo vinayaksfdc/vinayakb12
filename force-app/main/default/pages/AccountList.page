@@ -1,0 +1,6 @@
+<apex:page standardController="Account" recordSetVar="contacts">
+    <apex:pageBlock title="Contacts List">
+        
+        
+    </apex:pageBlock>
+</apex:page>

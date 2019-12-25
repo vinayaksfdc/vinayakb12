@@ -1,0 +1,7 @@
+<aura:component controller="ex1">
+    <aura:attribute name="result" type="string" default="raj"/>
+    
+                <lightning:button label="Submit" onclick="{!c.handleClick}" />
+  
+    {!v.result}
+</aura:component>

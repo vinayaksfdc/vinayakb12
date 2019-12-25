@@ -1,0 +1,6 @@
+<apex:page controller="pg_refer">
+    <apex:form >
+    <apex:commandButton value="show" action="{!show}" />
+    
+    </apex:form>
+</apex:page>

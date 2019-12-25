@@ -1,0 +1,56 @@
+<apex:page controller="Multi_select_object_fld_dependency">
+     <style>
+     .box{
+        width:150px;
+        }   
+    </style>    
+    <style>
+     .panel{
+        height:150px;    
+        width:150px;
+        }   
+	</style>  
+           <style>
+     .panel1{
+        height:170px;    
+        width:170px;
+        }   
+    </style> 
+    
+    
+   <apex:form id="one">
+   	<apex:pageBlock >
+		<apex:pageBlockSection columns="1">
+              <apex:outputLabel value="SObject"/>
+        	  <apex:selectList size="1" value="{!selected1}" styleClass="box">
+              <apex:selectOptions value="{!Sobjects}"/>
+			  <apex:actionSupport event="onchange" action="{!getData}" rerender="one"/>                
+              </apex:selectList>
+        </apex:pageBlockSection>   
+       
+        
+        <apex:pageBlockSection >
+        <apex:panelGrid columns="3" id="one" styleClass="panel1">
+       	<apex:panelGroup >
+        <apex:selectList multiselect="true"  value="{!addfields}" styleClass="panel"  >
+        <apex:selectOptions value="{!leftside}" />    
+        </apex:selectList>
+        </apex:panelGroup>   
+				        
+   		<apex:panelGrid >
+         <apex:panelGroup >   
+        <apex:commandButton value="add" action="{!add}" />
+        <apex:commandButton value="del" action="{!del}" />
+         </apex:panelGroup>      
+        </apex:panelGrid>    
+         
+        <apex:panelGroup >      
+        <apex:selectList multiselect="true" value="{!removefields}" styleClass="panel">
+        <apex:selectOptions value="{!rightside}" />      
+        </apex:selectList>
+        </apex:panelGroup> 	        
+        </apex:panelGrid>
+        </apex:pageBlockSection>
+     </apex:pageBlock> 
+   </apex:form> 
+</apex:page>

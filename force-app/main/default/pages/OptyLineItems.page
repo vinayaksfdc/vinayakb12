@@ -1,0 +1,45 @@
+<apex:page controller="OptyLineItems" id="page">
+    <script>
+    	function getRow(myId){
+        var rowids=myid.split(':');
+        document.getElementbyId('page:fm:hid').value=rowids[4];	
+            fun();
+        }
+    	function calculate(myId)
+    {
+    	var rowids=myid.split(':');
+        var quant=document.getElementbyId('page:fm:pb:pbt:'+rowIds[4]+':quant').value;
+        var price=document.getElementbyId('page:fm:pb:pbt:'+rowIds[4]+':price').value;
+            if(quant!null && price!=null)
+                var total=parseInt(quant)*parseInt(price);
+        document.getElementbyId('page:fm:pb:pbt:'+rowIds[4]+':total').value;
+       
+    }
+    </script>
+  <apex:form id="fm">
+     
+      <apex:actionFunction name="fun" action="{!getData}"  rendered="pbt"/>
+        <apex:inputHidden value="{!rowNO}" id="hid"/> 
+    <apex:pageBlock title="Prod line Item">
+          <apex:variable var="index" value="{!0}" />
+        <apex:pageBlockTable value="{!Lineitems}" var="a" id="pbt"> 
+        <apex:column headerValue="Sno">    
+       		{!index}
+             <apex:variable value="{!index+1}" var="index" />
+        </apex:column>
+		<apex:column headerValue="prod">    
+       	<apex:inputText value="{!a.prodName}" id="name" onchange="getRow(this.id)"/>
+        </apex:column> 
+         <apex:column headerValue="price">    
+       	 <apex:inputText value="{!a.price}" id="price" onchange="getRow(this.id)"/>
+          </apex:column>  
+          <apex:column headerValue="quant">    
+       	<apex:inputText value="{!a.quant}" id="quant"/>
+        </apex:column>  
+         <apex:column headerValue="total amt">    
+       	<apex:inputText value="{!a.total}" id="total"/>
+        </apex:column>  
+        </apex:pageBlockTable>
+     </apex:pageBlock>
+  </apex:form>	
+</apex:page>

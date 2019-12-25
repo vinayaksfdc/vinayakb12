@@ -1,0 +1,32 @@
+<apex:page controller="std_wrapper_Lst">
+  <apex:form >  
+    <apex:pageBlock title="student" >
+        	<apex:pageBlockButtons >
+        	<apex:commandButton value="create" action="{!create}" rerender="one" />
+             <apex:commandButton value="Delete" action="{!del}" rerender="one" />   
+             <apex:commandButton value="edit" action="{!edit}" rerender="one" /> 
+             <apex:commandButton value="saveedited" action="{!saveedited}" rerender="one" />    
+             </apex:pageBlockButtons>
+        
+    	<apex:pageBlockSection columns="1">
+            <apex:pageBlockSectionitem >
+       Enter Name 		    <apex:inputText value="{!wname}"/>
+            </apex:pageBlockSectionitem>
+    		<apex:pageBlockSectionitem >
+       Enter Age 		    <apex:inputText value="{!wage}"/>
+            </apex:pageBlockSectionitem>
+    		<apex:pageBlockSectionitem >
+       Enter RollNO 	        <apex:inputText value="{!wrollno}"/> 
+            </apex:pageBlockSectionitem>
+    	    </apex:pageBlockSection>
+        <apex:pageBlockTable value="{!Lstd}" var="a" id="one">
+           <apex:column >
+               <apex:inputCheckbox value="{!a.f1}"/>
+            </apex:column>    
+           <apex:column Headervalue="name" value="{!a.name}"/>  
+           <apex:column Headervalue="rollno"  value="{!a.rollno}"/>  
+            <apex:column Headervalue="age" value="{!a.age}"/>   
+        </apex:pageBlockTable>
+     </apex:pageBlock>
+   </apex:form>   
+</apex:page>

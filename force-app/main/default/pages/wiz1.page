@@ -1,0 +1,7 @@
+<apex:page controller="wiz1">
+       <apex:form >
+    	<apex:outputField value="{!account.name}"/>
+    	<apex:inputField value="{!account.phone}"/>	
+    	<apex:commandButton value="Update" action="{!Save}"/>    
+    </apex:form>
+</apex:page>

@@ -1,0 +1,8 @@
+<apex:page controller="wiz">
+    <apex:form >
+       <apex:pageBlock > 
+    	<apex:inputField value="{!account.name}"/>
+		<apex:commandButton value="Update record" action="{!Save}"/>    
+       </apex:pageBlock>                                                           
+    </apex:form>
+</apex:page>

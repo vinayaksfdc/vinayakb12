@@ -1,0 +1,24 @@
+<apex:page controller="apex_in" docType="html-5.0" id="pg">
+   <apex:form id="fm"> 	
+       <script>
+      function callMe()
+       {
+           var nme=document.getElementById('pg:fm:pb:name').value;
+       }
+       </script>
+  
+    <apex:pageBlock id="pb">
+        <apex:outputLabel value="Enter name"></apex:outputLabel>
+   		<apex:inputText list="{!accs}" id="name" onchange="callMe()"/>
+    </apex:pageBlock>
+         <apex:pageBlock >
+             <apex:pageBlockTable value="{!acc}" var="a">
+            <apex:column value="{!a.name}" />
+            <apex:column value="{!a.industry}" />
+            <apex:column value="{!a.phone}" />
+            <apex:column value="{!a.rating}" />
+            </apex:pageBlockTable>
+ 
+       </apex:pageBlock>
+  </apex:form>     
+</apex:page>

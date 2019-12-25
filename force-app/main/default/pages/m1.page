@@ -1,0 +1,56 @@
+<apex:page controller="m" >
+    <style>
+     .box{
+        width:150px;
+        height:150px;
+        }   
+    </style>    
+        <style>
+     .box1{
+        width:150px;
+        }   
+    </style>  
+       
+   <apex:form >
+   	<apex:pageBlock mode="maindetail">
+      
+        
+        <apex:pageBlockSection columns="1" id="pb">&nbsp;&nbsp;&nbsp;&nbsp;
+            <apex:outputPanel >   
+        	<apex:selectList size="1" value="{!selectedobject}" styleClass="box1">
+                <apex:selectOptions value="{!Objects}"/>
+                <apex:actionSupport event="onchange" action="{!getData}" rerender="pb"/>
+				</apex:selectList>
+                </apex:outputPanel>
+            
+                     <apex:panelGrid columns="3" rendered="{!flag}"  >
+                        <apex:panelGroup >
+                        <apex:selectList multiselect="true"  value="{!addfields}" styleClass="box"  >
+                        <apex:selectOptions value="{!leftside}" />    
+                        </apex:selectList>
+                        </apex:panelGroup>   
+                 
+                        <apex:panelGrid columns="1" >
+                        <apex:panelGroup >   
+                        <br/><br/>    
+                        <apex:commandButton value="add" action="{!add}" reRender="pb" /><br/><br/>
+                        <apex:commandButton value="del" action="{!del}"  reRender="pb" />
+                        </apex:panelGroup>      
+                        </apex:panelGrid>    
+                 
+                        <apex:panelGroup >      
+                        <apex:selectList multiselect="true" value="{!removefields}" styleClass="box">
+                        <apex:selectOptions value="{!rightside}" />      
+                        <apex:actionSupport event="onchange" action="{!fetchData}" reRender="one" />
+                        </apex:selectList>
+                        </apex:panelGroup> 	        
+                </apex:panelGrid>
+      </apex:pageBlockSection>   
+        <apex:pageBlock id="one" >
+                <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Query" action="{!fetchData}" rerender="one"/>
+                </apex:pageBlockButtons>  
+         </apex:pageBlock>
+     </apex:pageBlock> 
+    </apex:form> 
+</apex:page>

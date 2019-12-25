@@ -1,0 +1,12 @@
+<apex:page controller="Sharukh" >
+<apex:form >
+<apex:commandButton value="pdf" action="{!addPDF1}"/>
+<apex:pageblock >
+<apex:pageBlockTable value="{!ac}" var="b">
+<apex:column value="{!b.id}"/>
+<apex:column value="{!b.name}"/>
+<apex:column value="{!b.Email__c}"/>
+</apex:pageBlockTable>
+</apex:pageblock>
+</apex:form>
+</apex:page>
